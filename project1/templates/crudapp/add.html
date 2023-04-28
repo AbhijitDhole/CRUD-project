@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+       
+{% block title %}
+        <title>ADD ORDER</title>
+{% endblock %}
+
+{% block content %}       
+
+<div class= "shadow-lg p-3 mb-5 bg-body rounded" >
+       <h1 class= 'text-center'>ORDER FORM<h1>
+        <form method= "post">
+            {% csrf_token %}
+            {{form.as_p}}
+            <input type = 'submit' value = "ADD ORDER" class="btn btn-success btn-lg">
+            <input type = 'reset' value = "RESET FORM" class="btn btn-warning btn-lg float-end">
+
+        </form>
+</div>
+{% endblock %}

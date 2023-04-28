@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<h1>LOGIN FORM</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class = 'container'>
+
+    <form method= 'post'>
+        {% csrf_token %}
+        <lable for="un" ><b>Enter Username:</b></label>
+        <input type = "text" id= "un" name= "un" class = "form-control">
+            <br>
+        <label for="pw"><b>Enter Password:</b></label>
+        <input type = "password" id="pw" name= "pw" class= "form-control">
+        <br>
+        <center>
+        <input type="submit" value= "LOGIN" class = "btn btn-success btn-lg">
+        </center>
+    </form>
+</div>
+
+{% endblock %}
